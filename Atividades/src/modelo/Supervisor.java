@@ -19,10 +19,6 @@ public class Supervisor extends Pessoa {
 
 	}
 
-	public void getSupervisor() {
-		this.toString();
-	}
-
 	public int getLimiteSupervisao() {
 		return limiteSupervisao;
 	}

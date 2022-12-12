@@ -22,10 +22,6 @@ public class Grupo {
 
 	}
 
-	public void getGrupo() {
-		this.toString();
-	}
-
 	public String getNomeGrupo() {
 		return nomeGrupo;
 	}

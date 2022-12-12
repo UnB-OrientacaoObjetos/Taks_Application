@@ -15,10 +15,6 @@ public class Colaborador extends Pessoa {
 
 	}
 
-	public void getColaborador() {
-		this.toString();
-	}
-
 	public String getFuncao() {
 		return funcao;
 	}
