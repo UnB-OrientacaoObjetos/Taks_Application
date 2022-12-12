@@ -2,28 +2,44 @@ package modelo;
 
 public abstract class Pessoa {
 
-	private String nomeUsuario;
+	protected String nomeUsuario;
 
-	private String EmailUsuario;
+	protected String emailUsuario;
 
-	private String contatoUsuario;
+	protected String contatoUsuario;
 
-	private int limiteProducao;
+	protected int limiteProducao;
 
 	public void editarNome(String novoNomePes) {
-
+		nomeUsuario = novoNomePes;
 	}
 
-	public void editarContato(int novoContato) {
-
+	public void editarContato(String novoContato) {
+		contatoUsuario = novoContato;
 	}
 
 	public void definirEmail(String conta) {
-
+		emailUsuario = conta;
 	}
 
 	public void editarLimiteProducao(int limiteProd) {
+		limiteProducao = limiteProd;
+	}
 
+	public String getNomeUsuario() {
+		return nomeUsuario;
+	}
+
+	public String getEmailUsuario() {
+		return emailUsuario;
+	}
+
+	public String getContatoUsuario() {
+		return contatoUsuario;
+	}
+
+	public int getLimiteProducao() {
+		return limiteProducao;
 	}
 
 }
