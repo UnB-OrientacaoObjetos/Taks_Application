@@ -1,4 +1,6 @@
-package modelo;
+package models;
+
+import java.util.Date;
 
 public class Atividade {
 
@@ -6,19 +8,26 @@ public class Atividade {
 
 	private boolean conclusaoAtividade;
 
-	private Prioridade prioridade;
-	
-	private Grupo grupo;
-	
-	private Supervisor supervisor;
+	private String descricao;
 
-	public Atividade(String nomeAtiv, boolean conclAtv) {
-		nomeAtividade = nomeAtiv;
-		conclusaoAtividade = conclAtv;
+	private Date dataInicio;
+
+	private Date dataFim;
+
+	private String classificador;
+
+	private Prioridade prioridade;
+
+	private Colaborador[] colaborador;
+	
+	private Supervisor[] supervisor;
+
+	public Atividade(String nomeAtiv, Date inicio, Date Fim, String infoAtividade) {
+
 	}
 
 	public void editarNomeAtividade(String novoNomeAtv) {
-		nomeAtividade = novoNomeAtv;
+
 	}
 
 	public void apagarAtividade() {
@@ -26,13 +35,11 @@ public class Atividade {
 	}
 
 	public void definirPrioridade(Prioridade prioridadeAtv) {
-		
-		prioridade = prioridadeAtv;
-		
+
 	}
 
 	public void escolherAgrupacao(Grupo grupoAtv) {
-		grupo = grupoAtv;
+
 	}
 
 	public void concluirAtividade() {
@@ -44,29 +51,44 @@ public class Atividade {
 	}
 
 	public void escolherSupervisor(Supervisor Sup) {
-		supervisor = Sup;
+
 	}
 
 	public String getNomeAtividade() {
 		return nomeAtividade;
 	}
 
-	public boolean getConclusaoAtividade() {
+	public boolean isConclusaoAtividade() {
 		return conclusaoAtividade;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public Date getDataInicio() {
+		return dataInicio;
+	}
+
+	public Date getDataFim() {
+		return dataFim;
+	}
+
+	public String getClassificador() {
+		return classificador;
 	}
 
 	public Prioridade getPrioridade() {
 		return prioridade;
 	}
 
-	public Grupo getGrupo() {
-		return grupo;
+	public Colaborador[] getColaborador() {
+		return colaborador;
 	}
 
-	public Supervisor getSupervisor() {
+	public Supervisor[] getSupervisor() {
 		return supervisor;
 	}
-	
-	
 
 }
+
